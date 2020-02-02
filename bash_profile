@@ -42,7 +42,8 @@ export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 
 [ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
 export PATH=usr/local/bin:$PATH
-cd ~/Documents/staffany
+cd ~/Documents
+
 # export JAVA_HOME=`/usr/libexec/java_home -v 9`; 
 
 # Slightly modified from: https://coderwall.com/p/fasnya/add-git-branch-name-to-bash-prompt
@@ -93,3 +94,14 @@ if [ -f '/Users/tiffany/Documents/google-cloud-sdk/path.bash.inc' ]; then . '/Us
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/tiffany/Documents/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/tiffany/Documents/google-cloud-sdk/completion.bash.inc'; fi
+
+export RBENV_ROOT=/usr/local/var/rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+
+# For compilers to find zlib
+export LDFLAGS="-L/usr/local/opt/zlib/lib"
+export CPPFLAGS="-I/usr/local/opt/zlib/include"
+export PKG_CONFIG_PATH="/usr/local/opt/zlib/lib/pkgconfig"
+export PATH="/Users/tiffany/.ebcli-virtual-env/executables:$PATH"
+export PATH=/Users/tiffany/.pyenv/versions/3.7.2/bin:$PATH
